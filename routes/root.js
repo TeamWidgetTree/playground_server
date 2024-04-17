@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
+const path = '/'
+
 router.get('/', (req, res) => {
   const user = {
     name: '홍길동',
@@ -9,4 +11,4 @@ router.get('/', (req, res) => {
   res.send(user)
 })
 
-module.exports = router
+module.exports = { path: path, router: router }
