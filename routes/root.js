@@ -1,7 +1,8 @@
-const express = require('express')
-const router = express.Router()
+import express from 'express'
 
-const path = '/'
+export const router = express.Router()
+
+export const path = '/'
 
 router.get('/', (req, res) => {
   const user = {
@@ -10,5 +11,3 @@ router.get('/', (req, res) => {
   }
   res.send(user)
 })
-
-module.exports = { path: path, router: router }
